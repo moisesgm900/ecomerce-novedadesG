@@ -1,0 +1,45 @@
+<mat-dialog-content>
+  <div class="max-w-4xl w-full bg-gray-100 rounded-lg px-4">
+    <div mat-dialog-actions align="end" class="">
+        <button  mat-dialog-close matTooltip="Cerrar" class="rounded-lg h-10 w-10 bg-white text-idea-flesh-pink cursor-pointer">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+   <div class="flex flex-wrap">
+    <div class="w-full md:w-1/2 p-4 flex flex-col">
+        <img onerror="javascript:this.src='assets/logos/novedadesGamboa.jpeg'" src="{{ShowImage}}" alt="" class=" lg:w-60 lg:h-60 md:w-40 md:h-40 object-cover bg-white mx-auto mb-4 rounded-lg">
+        <div class="justify-items-center	"  >
+           <img  *ngFor=" let img of images" (click)="changeimage(img.imagen)" style="display: inline-block" src="{{img.imagen}}" class="w-10 h-10 mx-4 object-cover bg-white mx-auto mb-4 rounded-lgr" alt="">
+        </div>
+     </div>
+     <div class="w-full md:w-1/2 p-4 font-bold flex flex-col gap-4 place-content-between">
+         <div class="flex flex-col gap-y-4">
+             <div>
+                 <div class="font-bold text-2xl uppercase">
+                   {{data.nombre}} 
+                 </div>
+                 <div class="font-light text-sm">
+                   {{data.categoria}}
+                 </div>
+              </div>
+             <mat-divider></mat-divider>
+             <div class="flex flex-col gap-y-4">
+                 <a  class="flex gap-x-4 hover:text-idea-flesh-pink duration-300">
+                     
+                     <div>${{data.precio_venta}}</div>
+                 </a>
+                 <div  class="flex gap-x-4 hover:text-idea-flesh-pink duration-300">
+                     {{data.descripcion}}
+                 </div>
+             </div>
+         </div>
+         <mat-dialog-actions class="place-self-end space-x-4">
+             <button mat-raised-button color="primary" class=" hover:bg-sky-700">
+              Agregar 
+           </button>
+         
+         </mat-dialog-actions>
+     </div>
+   </div>
+</div>
+</mat-dialog-content>
