@@ -74,8 +74,8 @@ export class DialogComponent implements OnInit {
     this.provider.BD_ActionPost('productos','getImages',{id:this.data.id} ).subscribe({
       next : (data: any)=>{
         this.images = data;
-        this.images.push(this.data)
         console.log(this.images);
+        this.images.push(this.data)
       }, error: (error: any) => {
       }
     })

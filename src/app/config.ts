@@ -1,6 +1,6 @@
 const PROTOCOL = window.location.protocol;
 const DOMINIO = window.location.hostname;
-const WSERVICE = 'services-papeleria';
+const WSERVICE = '/servicesGamboa/servicesGamboa';
 
 export const config = {
   url: PROTOCOL + '//' + 'valle.sandbox.ptsanmiguelense.com.mx' + '/#',
